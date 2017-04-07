@@ -1,0 +1,70 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>自动搜索功能例子</title>
+  <meta name="Author" content="wblearn">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="search.js"></script>
+  <style type="text/css">
+    #container{
+        position:absolute;
+        left:50%;
+        top: 40%;
+    }
+    #content{
+        float:left;
+        position:relative;
+        right:50%;
+    }
+    input{
+        border:0;
+        width:288px;
+        height:30px;
+        font-size:16px;
+        padding:0 5px;
+        line-height:30px;
+    }
+    .item{
+        padding:3px 5px;
+        cursor:pointer;
+    }
+    .active{
+        background:#87A900;
+    }
+    .first{
+        border:solid #87A900 2px;
+        width:300px;
+    }
+    #searchlist{
+        border:solid #87A900 2px;
+        border-top:0;
+        display:none;
+    }
+
+  </style>
+ </head>
+ <body>
+    <div id="container">
+        <div id="content">
+            <div class="first"><input class="input_src"></div>
+            <div id="searchlist"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function(){
+        $('.input_src').search({
+            schdata:[           
+            "搜索测试1:javascript",
+            "搜索测试2:vue",
+            "搜索测试3:webpack",
+            "搜索测试4:fis3",
+            "搜索测试5:python",
+            "搜索测试6:angular"
+            ]
+        });
+    })
+</script>
+ </body>
+</html>
